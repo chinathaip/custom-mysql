@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: ite442
+      MYSQL_ROOT_PASSWORD: "1"
+    ports:
+      - "1234:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: always
+
+volumes:
+  mysql_data:
